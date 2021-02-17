@@ -13,10 +13,10 @@ const InfoBox = ({ label, cases, total }) => {
             {label}
           </Typography>
           <Typography variant="h5" color="textPrimary" gutterBottom>
-            {total}
+            {total !== "0" ? total : "Loading..."}
           </Typography>
           <Typography variant="body2" color="textPrimary" gutterBottom>
-            {cases} today
+            {cases !== "+0" ? `${cases} today` : "Loading..."}
           </Typography>
         </CardContent>
       </Card>
